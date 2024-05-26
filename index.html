@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+	<title>LOGITECH</title>
+<head>
+<meta charset="UTF-8">
+<title>Baristas</title>
+        
+		<link rel="stylesheet" href="styles.css" />
+        <link rel="icon" type="image/png" href="https://cdn.icon-icons.com/icons2/2845/PNG/512/logitech_logo_icon_181377.png">
+
+	<div class="container-hero">
+		<div class="container hero">
+			
+			<div class="customer-support">
+
+				<img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/logitech_logo_icon_181377.png" alt="" width="200">
+				<div class="content-customer-support">
+
+				</div>
+			</div>
+			<div class="container-logo">
+				
+			<br><br>
+
+				<h1><a href="/">LOGITECH</a></h1>
+			</div>
+
+			<div class="social-icons">
+				<span class="facebook">
+					<a href="https://www.facebook.com/perulogitech/" target="_blank">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+				</span>
+				<span class="whatsapp">
+					<a href="https://x.com/Logitech?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+						<i class="fab fa-x"></i>
+					</a>
+				</span>
+				<span class="youtube">
+					<a href="hhttps://www.youtube.com/logitech" target="_blank">
+						<i class="fab fa-youtube"></i>
+					</a>
+				</span>
+				<span class="instagram">
+					<a href="https://www.instagram.com/logitech/" target="_blank">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-navbar">
+		<nav class="navbar container">
+			<i class="fa-solid fa-bars"></i>
+			<ul class="menu">
+				<li><a href="index.html">INICIO</a></li>
+				<li><a href="https://www.logitechg.com/es-roam/products/gaming-mice.html">MOUSE</a></li>
+				<li><a href="https://www.logitechg.com/es-roam/products/gaming-keyboards.html">TECLADO</a></li>
+				<li><a href="https://www.logitechg.com/es-roam/products/gaming-audio.html">AUDIFONOS</a></li>
+			</ul>
+
+			<form class="search-form">
+				<input type="search" placeholder="Buscar..." />
+				<button class="btn-search">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</form>
+		</nav>
+	</div>
+</header>
+</html>
+<html>
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>index</title>
+<!-- write your code here -->
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="index.js?1716687104134"></script>
+<style>
+    #canvas {
+      position: absolute;
+      display: block;
+      background-color: rgb(255, 255, 255);
+      width: 1800px;
+      height: 720px;
+      left: 35px; /* Ajusta el valor de "left" según sea necesario */
+    }
+  </style>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("00A390C2EC419D42943A01C5D84149A6");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.index();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:1800px; height:720px">
+		<canvas id="canvas" width="1800" height="720" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1800px; height:720px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+
+	<main class="main-content">
+		<section class="container container-features">
+			<div class="card-feature">
+				<i class="fa-solid fa-plane-up"></i>
+				<div class="feature-content">
+					<span>Envío gratuito a nivel mundial</span>
+					<p>En pedido superior a S/.1250</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-wallet"></i>
+				<div class="feature-content">
+					<span>Contrareembolso</span>
+					<p>100% garantía de devolución de dinero</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-gift"></i>
+				<div class="feature-content">
+					<span>Tarjeta regalo especial</span>
+					<p>Ofrece bonos especiales con regalo</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-headset"></i>
+				<div class="feature-content">
+					<span>Servicio al cliente 24/7</span>
+					<p>LLámenos 24/7 al 123-456-7890</p>
+				</div>
+			</div>
+		</section>
+	
+		<section class="container top-products">
+			<h1 class="heading-1">Mejores Productos</h1>
+	
+			<div class="container-options">
+				
+				<span>Más recientes</span>
+				<span>Mejores Vendidos</span>
+			</div>
+	
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="mouse 305.jpg" alt="Cafe Irish" />
+						<span class="discount">-13%</span>
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Logitech G305</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">S/.200<span>S/.250</span></p>
+					</div>
+				</div>
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img
+							src="mouse g703.jpg"
+							alt="Cafe incafe-ingles.jpg"
+						/>
+						<span class="discount">-22%</span>
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Logitech G703</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">S/.240<span>S/.280</span></p>
+					</div>
+				</div>
+				<!--  -->
+				<div class="card-product">
+					<div class="container-img">
+						<img
+							src="mouse g502x.jpg"
+							alt="Cafe Australiano"
+						/>
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Logitech G502 X</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">S/.250</p>
+					</div>
+				</div>
+				<!--  -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="Mouse G Pro.jpg"Cafe Helado" />
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Logitech Pro X</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">S/.380</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		
+	
+		<section class="container specials">
+	
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="teclado g815.jpg" alt="Cafe Irish" />
+						<span class="discount">-13%</span>
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Teclado G815</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">S/.460<span>S/500</span></p>
+					</div>
+				</div>
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img
+							src="teclado.jpg"
+							alt="Cafe incafe-ingles.jpg"
+						/>
+						<span class="discount">-22%</span>
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Teclado G915</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">S/.450<span>S/.500</span></p>
+					</div>
+				</div>
+				<!--  -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="audifono pro.jpg" alt="Cafe Viena" />
+						<span class="discount">-30%</span>
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Audifono Pro X</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">S/.450<span>S/.550</span></p>
+					</div>
+				</div>
+				<!--  -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="audifonos g733.jpg" alt="Cafe Liqueurs" />
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Audifono G733</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">S/.250</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="container blogs">
+			<h1 class="heading-1">NOVEDADES</h1>
+	
+			<div class="container-blogs">
+				<div class="card-blog">
+					<div class="container-img">
+						<img src="ultima noticia 1.webp" alt="Imagen Blog 1" />
+						<div class="button-group-blog">
+							<span>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-link"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-blog">
+						<h3>JUEGA CON TODO EL ESPECTRO DE COLOR</h3>
+						<p>
+							Ilumina tu stream y agrega color a tu habitación con nuestra última Litra Beam LX.
+						</p>
+						<div class="btn-read-more"><a href="https://www.logitechg.com/es-roam/products/microphones/yeti-gx-gaming-microphone.988-000568.html">LEER MAS</a></div>
+					</div>
+				</div>
+				<div class="card-blog">
+					<div class="container-img">
+						<img src="ultima noticia 2.webp" alt="Imagen Blog 2" />
+						<div class="button-group-blog">
+							<span>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-link"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-blog">
+						<h3>SIN OPOSICIÓN</h3>
+						<p>
+							Presentamos la nueva y mejorada PRO Series. Como siempre, se diseñó en colaboración con los mejores jugadores de esports del mundo. Y se concibió para ganar.
+						</p>
+						<div class="btn-read-more"><a href="https://www.logitechg.com/es-roam/products/pro.html">LEER MAS</a></div>
+					</div>
+				</div>
+				<div class="card-blog">
+					<div class="container-img">
+						<img src="ultima noticia 3.webp" alt="Imagen Blog 3" />
+						<div class="button-group-blog">
+							<span>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-link"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-blog">
+						<h3>PRO SERIES</h3>
+						<p>
+							Sin distracciones. Nada se interpone entre tú y la victoria.
+						</p>
+						<div class="btn-read-more"><a href="https://www.logitechg.com/es-roam/products/pro.html">LEER MAS</a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<footer class="footer">
+		<div class="container container-footer">
+			<div class="menu-footer">
+				<div class="contact-info">
+					<p class="title-footer">Información de Contacto</p>
+					<ul>
+						<li>
+							Dirección: 71 Pennington Lane Vernon Rockville, CT
+							06066
+						</li>
+						<li>Teléfono: 123-456-7890</li>
+						<li>EmaiL: logitech@support.com</li>
+					</ul>
+					
+				</div>
+	
+				<div class="information">
+					<p class="title-footer">Información</p>
+					<ul>
+						<li><a href="https://www.logitechg.com/es-roam/about.html">Acerca de Nosotros</a></li>
+						<li><a href="https://www.logitechg.com/es-roam/legal/web-privacy-policy.html">Politicas de Privacidad</a></li>
+						<li><a href="https://www.logitech.com/es-roam/tos/terms.html">Términos de Uso</a></li>
+						<li><a href="https://www.logitechg.com/es-roam/contact.html">Contactános</a></li>
+					</ul>
+				</div>
+	
+				<div class="my-account">
+					<p class="title-footer">Mi cuenta</p>
+	
+					<ul>
+						<li><a href="#">Mi cuenta</a></li>
+						<li><a href="#">Historial de ordenes</a></li>
+						<li><a href="#">Lista de deseos</a></li>
+						<li><a href="#">Boletín</a></li>
+						<li><a href="#">Reembolsos</a></li>
+					</ul>
+				</div>
+	
+				<div class="newsletter">
+					<p class="title-footer">Boletín informativo</p>
+	
+					<div class="content">
+						<p>
+							Suscríbete a nuestros boletines ahora y mantente al
+							día con nuevas colecciones y ofertas exclusivas.
+						</p>
+						<input type="email" placeholder="Ingresa el correo aquí...">
+						<button>Suscríbete</button>
+					</div>
+				</div>
+			</div>
+	
+			<div class="copyright">
+				<p>
+					Desarrollado por Programación para el mundo &copy; 2022
+				</p>
+			</div>
+		</div>
+	</footer>
+	<script
+		src="https://kit.fontawesome.com/81581fb069.js"
+		crossorigin="anonymous"
+	></script>
+</body>
+</html>
